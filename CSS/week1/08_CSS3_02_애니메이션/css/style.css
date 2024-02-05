@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, section, footer, nav, article, aside{
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* 레이아웃 */
+body > div{
+    box-shadow: 2px 2px 11px #b7b5b585;
+    padding: 50px;
+    margin: 20px 0;
+}
+
+body > div > h2{
+    font-size: 30px;
+    margin-bottom: 25px
+}
+
+body > div > p{
+    font-size: 24px;
+    margin: 15px 0;
+    margin-top: 50px;
+    font-weight: 600;
+    width: auto;
+    background-color: #ebebebbe;
+    padding: 5px 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+body > div > p:nth-child(1){
+    margin-top: 0 !important;
+}
+
+/* 애니메이션 효과 : animation + @keyframes */
+
+.ani_01{
+    width: 100%;
+    height: 400px;
+    background-color: #888;
+    position: relative;
+}
+
+.ani_01 img{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    animation: 10s ani_cart 1 linear;
+}
+
+@keyframes ani_cart {
+    0%{
+        left: 0;
+        transform: rotateY(0deg);
+    }
+    25%{
+        top: 0;
+        left: calc(100% - 80px);
+        transform: rotateY(0deg);
+    }
+    50%{
+        top: calc(100% - 80px);
+        left: calc(100% - 80px);
+        transform: rotateY(180deg);
+    }
+    75%{
+        top: calc(100% - 80px);
+        left: 0;
+        transform: rotateY(180deg);
+    }
+    100%{
+        top: 0;
+        left: 0;
+        transform: rotateY(0deg);
+    }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 구성</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div>
+        <h2>경계선(border) 처리</h2>
+        <p>border-radius : 20px; => 좌상단, 우상단, 우하단, 좌하단 모두 동일학 모서리 둥글게 처리하겠다는 의미</p>
+        <div class="radius_01"></div>
+        <div class="radius_02"></div>
+
+        <p>border-radius : 10px 20px 30px 40px; => 박스 모서리 좌상단으로부터 시계방향으로 각 모서리 둥글게를 지정</p>
+        <div class="radius_03"></div>
+
+        <p>border-radius: 10px 40px; => 좌상단(우하단) 우상단(좌하단) 각각 대각선으로 마주보고 있는 값이 동일한 경우 </p>
+        <div class="radius_04"></div>
+
+        <p>border-radius : 10px 20px 30px; => 좌상단 우상단(좌하단) 우하단 </p>
+        <div class="radius_05"></div>
+
+        <p>border-radius: 100% 0 0 0; => 1/2 원 구성시 width와 height를 다르게 조정</p>
+        <div class="quarter_radius"></div>
+
+        <p>border-radius: 0 100px 100px 0; => 1/2원 구성시</p>
+        <div class="half_radius"></div>
+
+        <p>border-radius: 100%; => 타원 구성시</p>
+        <div class="ellipse_radius"></div>
+
+        <p>border-radius: 50px; => 캡슐 형태 구성시</p>
+        <div class="capsule_radius"></div>
+
+        <p>border-radius: 38% 62% 63% 37% /41% 43% 56% 59%; => 불규칙한 원의 형태를 구성시</p>
+        <div class="unbalanced_radius"></div>
+    </div>
+
+    <div>
+        <h2>[ 공간에 대한 그림자 부여] box-shadow : x-offset값 y-offset값 스츠레드(경계선의번짐정도) 색상 => multifly 블랜딩 효과 적용</h2>
+        <div class="shadow-space-rect"></div>
+        <div class="shadow-space-circle"></div>
+        <p>neomorphism_box</p>
+        <div class="neomorphism_box">
+            <div></div>
+        </div>
+    </div>
+
+    <div>
+        <h2>Gradient 적용하기</h2>
+        <p>선형 그라디언트</p>
+        <div class="gr_linear"></div>
+
+        <p>원형 그라디언트</p>
+        <div class="gr_radial1"></div>
+        <div class="gr_radial2"></div>
+
+        <p>여러가지 배경 이미지를 하나의 공간에 부여시</p>
+        <div class="multi_bg"></div>
+    </div>
+
+    <div>
+        <h2 style="color: #f00">확장형(맞춤복) VS 축소형(기성복)</h2>
+        <p> box-sizing : content-box; => 확장형 박스 공간(padding, border 확장됨, 미설정시 기본값)</p>
+        <div class="content-box">
+            <div></div>
+        </div>
+
+        <p> box-sizing : border-box; => 축소형 박스 공간</p>
+        <div class="border-box">
+            <div></div>
+        </div>
+    </div>
+
+    <div>
+        <h2>[ 텍스트에 그림자 부여] box-shadow : x-offset값 y-offset값 스츠레드(경계선의번짐정도) 색상 => multifly 블랜딩 효과 적용</h2>
+        <div class="text-shadow">
+            <h2>TEXT SHADOW</h2>
+        </div>
+    </div>
+
+    <div>
+        <h2>[ 텍스트 줄임표 - ...으로 종료 ] text-overflow </h2>
+        <p>text-overflow: ellipsis; overflow: hidden; white-space: nowrap;</p>
+        <div class="text-overflow-space">
+            <h3>2024년 신년회를 개최합니다. 일시 : 2024년2월4일</h3>
+        </div>
+    </div>
+
+    <div>
+        <h2>단어에 대한 공간의 통제</h2>
+        <p>word-break: break-word; => 공간에서 텍스트가 넘치지 않도록</p>
+        <div class="word-space-01">
+            <p>asdfghjklasddfgghvmrigjeilneijnelsvnedkfefecvjtjthrje/</p>
+        </div>
+
+        <p>word-break: keep-all; => 단어마다 묶음(한글은 무조건 사용한다고 생각!)</p>
+        <div class="word-space-02"> 
+            <p>나라말이 중국과 달라 나라말이 중국과 달라 나라말이 중국과 달라 나라말이 중국과 달라 나라말이 중국과 달라 나라말이 중국과 달라</p>
+        </div>
+    </div>
+
+    <div>
+        <h2>[ word-spacing : 단어 사이의 간격을 조정 / letter-spacing : 글자사이의 간격을 조정 ]</h2>
+        <h5>-2px 미만으로 조정하지 말 것</h5>
+
+        <p>word-spacing: 5px; => 단어간에 간격 조정</p>
+        <div class="word-space">
+            <p>Special Dishes in Today</p>
+        </div>
+
+        <p>letter-space: -2px; => 글자간에 간격 조정</p>
+        <div class="letter-space">
+            <p>Special Dishes in Today</p>
+        </div>
+    </div>
+
+    <div>
+        <h2>[ white-space ] 부모 공간 개념상 접근 가능한 영역 지정</h2>
+        <p>pre태그</p>
+        <pre>
+            가나다라
+                가나다라
+            가나다라
+        </pre>
+
+        <p>white-space: normal;</p>
+        <div class="white-space">
+            <p class="default">화이트 스페이스 기본값
+                화이트 스페이스 기본값
+            </p>
+        </div>
+
+        <p>white-space: nowrap;</p>
+        <div class="white-space">
+            <p class="nowrap">화이트 스페이스 nowrap
+                화이트 스페이스 nowrap
+            </p>
+        </div>
+
+        <p>white-space: pre;</p>
+        <div class="white-space">
+            <p class="pre">
+            화이트 스페이스 pre
+                화이트 스페이스 pre
+                    화이트 스페이스 pre
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <h2>형태를 변형(transform)시킴 : 회전(rotate), 크기(scale), 이동(translate), 비틀기(skew)</h2>
+        <p>transform: rotate(45deg); => 회전</p>
+        <div class="tr-rotate-01">2D에서 회전<br>hover <br>transform-origin 기준으로 방향설정</div>
+        <div class="t-rotate-02">X축을 기준으로 회전</div>
+
+        <p>transform: sclae(1.2); => 크기조정</p>
+        <div class="tr-scale">크기조정 <br>hover</div>
+
+        <p>transform: translate(10px, 20px); => 이동</p>
+        <div class="tr-translate-01"></div>
+
+        <p>예제1) 로그인 팝업창 구성하기(브라우저 기준으로 중앙에 배치)</p>
+        <div class="none">display:none</div>
+        <div class="popup">
+            <div class="inputLine">
+                <label for="userid">아이디</label>
+                <input type="text" id="userid"/>
+            </div>
+            <div class="inputLine">
+                <label for="userpw">비밀번호</label>
+                <input type="text" id="userpw"/>
+            </div>
+            <div class="inputBtn">
+                <button>로그인</button>
+            </div>
+        </div>
+        
+        <p>예제2) 마우스 오버시 텍스트 부드럽게 올라오게</p>
+        <div class="cont_up">
+            <h2>New Interior</h2>
+        </div>
+
+    </div>
+
+</body>
+</html> 
